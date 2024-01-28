@@ -1,0 +1,57 @@
+HACKATHON 2024
+
+Team Name: 
+IR Blasters
+
+Team members:
+Weston
+Jakob
+Magen
+Jack (the pants)
+
+Materials Needed:
+Assortment of materials for obstructions. Solids, liquids, non-newtonian? Reflective (mirrors, Christmas Ornaments), rubber, glass, plastic, resin printed object.
+Laptops with Arduino IDE for Arduino work.
+Python
+Github Repo
+
+
+MVP 1:
+IR emitter and receiver
+objects in between IR components 
+these may need to be spinning/moving for an additional factor
+Ability to vary speeds
+Allow both manual and automated speed control
+emitter sends a full hex burst of FF FF FF FF
+receiver catches a random hex stream
+Entire contraption encased to contain emissions so things aren’t just reflected out and nothing gets to the receiver
+
+MVP 2:
+If the resultant number is not random, manipulate it for perceived randomness.
+Run received hex stream through random data analysis of sorts
+
+MVP 3:
+Take random number generated and use it
+Create a program with a secondary (or the same) Arduino board to play a game of rock paper scissors or similar simple game
+Use LEDs in labeled locations for each choice
+
+MVP 4:
+Make it all pretty
+
+
+
+Hardware Section
+
+Hardware Item                     Use Case
+IR transmitter                    IR sending
+IR Receiver                       IR collection
+Wire Jumper Cables                Prototyping and wire needs
+Colorful LEDs                     Game choices
+Breadboard                        Prototyping for Hardware
+Resistors and Capacitors          Any needed resistance or capacitance for circuitry
+Elegoo Uno R3 (Arduino clone) 2   Arduino needs, IR sending and receiving, Game brain
+Solder/Iron:                      Fabrication
+DC motors 6:                      Randomization material
+Speed Controller 3:               Controls rotation of motors 
+
+
