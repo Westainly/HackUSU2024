@@ -1,12 +1,13 @@
 void setup() {
-  // put your setup code here, to run once:
+  // LED_BUILTIN : PIN 13 for data output
   pinMode(LED_BUILTIN, OUTPUT);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Write to high to turn motor on through transistor.
   digitalWrite(LED_BUILTIN, HIGH);
   delay(1000);
+  // Write to low to turn motor off through transistor
   digitalWrite(LED_BUILTIN, LOW);
   delay(1000);
 }
