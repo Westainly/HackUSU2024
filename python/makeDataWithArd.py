@@ -1,6 +1,8 @@
 import serial
 import time
 
+f = open("randomNumbers.txt", "w")
+
 port = "/dev/ttyACM0"
 
 ard = serial.Serial(port, 9600, timeout=5)
@@ -17,8 +19,12 @@ def recieveData():
 
 
 def main():
-    for i in range(5):
-        print(recieveData())
+    for i in range(1000):
+        data = recieveData()
+        for num in data:
+            if num != "":
+                f.write(f"{num}\n")
+
 
 
 main()

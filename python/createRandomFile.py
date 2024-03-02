@@ -1,6 +1,6 @@
 import random
 
-AMOUNT = 2000001
+AMOUNT = 20001
 STARTING_RAND = -1
 ENDING_RAND = 1
 
