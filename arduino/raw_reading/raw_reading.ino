@@ -21,7 +21,6 @@ void loop() {
         skip = 1;
         continue;
       }
-
       skip =0;
       Serial.print(rx, DEC);
       Serial.print(F(","));
