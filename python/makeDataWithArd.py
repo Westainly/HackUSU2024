@@ -10,20 +10,25 @@ ard = serial.Serial(port, 9600, timeout=5)
 
 # This will read what is in the buffer :D
 def recieveData():
-    while True:
-        msg = ard.read(ard.in_waiting)
-        msg = msg.decode()
-        msg = msg.split(",")
-        if msg != ['']:
-            return msg
+    try:
+        while True:
+            msg = ard.read(ard.in_waiting)
+            msg = msg.decode()
+            msg = msg.split(",")
+            if msg != ['']:
+                return msg
+    except:
+        recieveData()
 
 def returnNumber(data):
+    if data is None:
+        return None
     for num in data:
         if num != "":
             return num
     return None
 def main():
-    for i in range(10000):
+    for i in range(1000):
         data = recieveData()
         for num in data:
             if num != "":
@@ -47,14 +52,38 @@ def rockPaperScisors():
         number = returnNumber(data)
         if number is not None:
             break
-    number = int(number) / 2 % 3
+    number = int(int(number) / 2) % 3
 
     if number == 0:
         print("Computer chose ROCK!")
+        print("""
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+""")
     elif number == 1:
         print("Computer chose Paper!")
+        print("""
+     ___________
+---'    ________)____
+           __________)
+          ___________)
+         ___________)
+---.______________)
+""")
     elif number == 2:
         print("Computer chose Scissors")
+        print("""
+    _______
+---'   ____)________
+          __________)
+       ______________)
+      (____)
+---.__(___)
+""")
     else:
         print(number)
 
@@ -78,7 +107,6 @@ def rockPaperScisors():
     else:
         print("Something went wrong...")
 
-main()
 rockPaperScisors()
 
 f.close
