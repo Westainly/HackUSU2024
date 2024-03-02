@@ -2,7 +2,7 @@
 This will be our Github Repository for the Hack USU 2024 competition.
 
 ### Group Members
-* Jack Bailey
+* Justin Bailey
 * Jakob Johnson
 * Magen Coleman
 * Weston Johnson
